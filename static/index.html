@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>Github OAuth</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Arvo&family=Kumbh+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <link href="style.css" rel="stylesheet" />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://binaries.webex.com/static-content-pipeline/webex-embedded-app/v1/webex-embedded-app-sdk.js" defer></script>
+  </head>
+
+  <body>
+    <div class="content unauthorized">
+      <div class="top">
+        <img class="img-github" src="github.png" />
+        <h1>Happy to see you<br />newcomer 👋</h1>
+      </div>
+      <div class="content-bottom">
+        <a class="btn" href="/auth">SIGN IN WITH WEBEX</a>
+        <p class="sign-in-text">in order to get started</p>
+      </div>
+    </div>
+    <div class="content authorized" style="display: none">
+      <h1>Embedded App Quick Start</h1>
+      <p>This is the initiator app. Its job is to specify a URL to share. Click <b>Set Share URL</b>, then click either <b>Open for all</b> (when running in a meeting) or <b>Add to tab</b> (when running in a space).</p>
+      <button onclick="handleSetShare()">Set Share URL</button>
+      <h2>Event Log</h2>
+      <ul id="console" />
+    </div>
+    <script type="text/javascript" src="main.js"></script>
+  </body>
+</html>
